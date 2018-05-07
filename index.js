@@ -8,7 +8,7 @@ app.engine('hbs', consolidate.handlebars);
 app.set('view engine','hbs');
 app.set('views','./views');
 
-app.use('/css',express.static('css'))
+app.use(express.static('public'))
 
 app.get("/", function (req, res) {
     res.render('index', {
