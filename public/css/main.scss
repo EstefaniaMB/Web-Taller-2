@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
-
-
 body {
     font-family: Cabin;
     width: 100%;
@@ -63,6 +61,23 @@ body {
             margin: 0 0.5em;
             position: absolute;
             bottom: 0;
+        }
+    }
+    .filtros {
+        background-color: white;
+        width: 20%;
+        h1 {
+            font-family: Raleway;
+            font-weight: 900;
+            font-size: 20px;
+            margin: 0 0.5em;
+        }
+        h2 {
+            font-family: Raleway;
+            font-weight: 900;
+            font-size: 15px;
+            margin: 0 0.5em;
+            color: #cb7bff;
         }
     }
 }
