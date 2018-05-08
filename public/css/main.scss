@@ -66,6 +66,8 @@ body {
     .filtros {
         background-color: white;
         width: 20%;
+        display: inline-block;
+        vertical-align: middle;
         h1 {
             font-family: Raleway;
             font-weight: 900;
@@ -78,6 +80,39 @@ body {
             font-size: 15px;
             margin: 0 0.5em;
             color: #cb7bff;
+        }
+    }
+    .productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: flex-start;
+        width: 80%;
+        vertical-align: middle;
+        float: right;
+        .productoM{
+            width: min-content;
+           // background: blue;
+            text-align: center;
+            margin-top: 3em;
+            //margin: 3em 0 3em 3em;
+            float: left;
+            img{
+                border-radius: 50%;
+                width: 250px;
+            }
+            h1{
+                font-family: Raleway;
+                font-weight: 900;
+                font-size: 15px;
+            }
+            h2{
+                font-family: Raleway;
+                font-weight: 500;
+                font-size: 15px;
+            }
         }
     }
 }

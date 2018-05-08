@@ -1,0 +1,27 @@
+{
+    "productos": [{
+        "imagen": "/images/product1.png",
+        "nombre": "Inked Cushion Gel Liner",
+        "precio": "$18.00",
+        "descripcion": "Formulated to go on intense like ink and glide on light as a feather, our liquid gel-type cushion liner never skips, clumps, or drags, helping you achieve the perfect winged look. The cushion pot helps control the amount of product that is picked up and the built-in brush is designed to work perfectly with the formula so you always get an intense payoff with precision and ease.",
+        "tamaño": "2 g"
+    }, {
+        "imagen": "/images/product2.jpg",
+        "nombre": "Face Mix Matte Pore Gel",
+        "precio": "$12.50",
+        "descripcion": "Erase unsightly oil with our matte pore gel, an oil controlling primer that helps you look fresh all day long! Formulated to provide soothing hydration, the refreshing gel texture instantly refreshes and soothes skin while leaving a velvety soft finish so makeup can wear longer and you can look your best any time of the day!",
+        "tamaño": "45 g"
+    }, {
+        "imagen": "/images/product3.png",
+        "nombre": "Mini Strobing Cushion",
+        "precio": "$19.00",
+        "descripcion": "Finally achieve that coveted dewy glow with our spoiler Strobing Cushion. Our hydrating formula keeps skin looking fresh while the natural pearly finish helps to give the face more dimension while also making skin look healthy and radiant! Choose from two finishes to get the perfect luminous look so you can keep the glow alive!",
+        "tamaño": "9 g"
+    }, {
+        "imagen": "/images/product4.jpg",
+        "nombre": "Panda's Glossy Lip Crayon",
+        "precio": "$13.00",
+        "descripcion": "These adorable lip crayons are packed with antioxidants to hydrate lips while allowing for long lasting color expression, leaving lips super soft. The creamy formula is the perfect compromise between a gloss and a balm, delivering a texture that glides on velvety smooth with a hydrating finish.",
+        "tamaño": "1.5 g"
+    }]
+}

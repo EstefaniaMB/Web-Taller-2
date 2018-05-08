@@ -13,7 +13,7 @@
 
     <ol>
         <li> <div class="button" style="background-image:url(./images/makeup.png)">
-                    <h3>MAKEUP</h3></li>
+                    <h3><em><u>MAKEUP</u></em></h3></li>
         <li> <div class="button" style="background-image:url(./images/skincare.png)">
                     <h3>SKINCARE</h3></li>
         <li> <div class="button" style="background-image:url(./images/body.png)">
@@ -22,7 +22,6 @@
 </nav>
 <div class="banner" style="background-image:url(./images/bannerImage.png)">
     <h1>♡ TONY MAKEUP ♡</h1>
-
 </div>
 <div class="filtros">
     <h1>FILTER BY</h1>
@@ -40,8 +39,15 @@
         <div class="filtroPrecio">
         <h2>PRICE</h2>
     </div>
-
-
+</div>
+<div class="productos">
+    {{#each maquillaje}} 
+    <div class="productoM">
+        <img src="{{imagen}}" alt="">
+        <h1>{{nombre}}</h1>
+        <h2>{{precio}}</h2>
+       </div>
+    {{/each}}
 </div>
 </body>
 </html>
