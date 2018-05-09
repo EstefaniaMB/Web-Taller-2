@@ -23,5 +23,43 @@
         "precio": "$13.00",
         "descripcion": "These adorable lip crayons are packed with antioxidants to hydrate lips while allowing for long lasting color expression, leaving lips super soft. The creamy formula is the perfect compromise between a gloss and a balm, delivering a texture that glides on velvety smooth with a hydrating finish.",
         "tamaño": "1.5 g"
+    },
+    {
+        "imagen": "/images/product5.jpg",
+        "nombre": "Panda's Dream Pocket Lip Balm",
+        "precio": "$9.50",
+        "descripcion": "Always dreamed of being able to carry around a panda in your pocket? This creamy, super-moisturizing lip balm comes in a cute pocketed-size panda compact and helps dry and chapped lips become soft and smooth with a hint of natural-looking color and glossy finish.",
+        "tamaño": "3.8 g"
+    },
+    {
+        "imagen": "/images/product6.jpg",
+        "nombre": "Panda's Dream Smudge Out Mascara",
+        "precio": "$15.00",
+        "descripcion": "No more dark circles from your smudged mascara! Our Panda's Dream Smudge Out Mascara keeps your lashes looking defined and fresh all day long.",
+        "tamaño": "10 g"
+    },{
+        "imagen": "/images/product7.png",
+        "nombre": "Facetone Skin Tint SPF 30++",
+        "precio": "$22.00",
+        "descripcion": "This skin tint is the perfect no-makeup makeup look for days when your skin needs to breathe. Formulated to stay on like second skin, this tint is weightless, dries down to a luminous matte finish, and glides on so thin that you’ll forget you even put anything on! Because of its unique formulation, this tint is perfect for layering until you achieve the coverage you need.",
+        "tamaño": "19 g"
+    },{
+        "imagen": "/images/product8.png",
+        "nombre": "Luminous Goddess Aura Perfume Face Mist",
+        "precio": "$13.50",
+        "descripcion": "Help your skin achieve goddess-status with our Luminous Goddess Aura Perfume Face Mist! Our oil-infused face mist not only has a subtle, femininely floral scent, but it also recharges skin with intense hydration so skin looks radiantly celestial. Use before, during, or after makeup application to help skin stay refreshed, hydrated, and always looking its best!",
+        "tamaño": "19 g"
+    },{
+        "imagen": "/images/product9.jpg",
+        "nombre": "spoiler Mini Cushion Blusher",
+        "precio": "$12.00",
+        "descripcion": "A Cushion compact blush that delivers vibrant color with a dewy glow for naturally flushed, healthy-looking cheeks. Infused with highly concentrated color pigments, a little goes a long way! The easy cushion applicator allows for buildable color that tints, refreshes and brightens your cheeks instantly. Available in shades of Pinks, Roses, and Peaches, this blush has a match for all skin tones.",
+        "tamaño": "9 g"
+    },{
+        "imagen": "/images/product10.jpg",
+        "nombre": "Petit Bunny Gloss Bars",
+        "precio": "$8.00",
+        "descripcion": "With a smooth texture that falls somewhere between a lipstick and a lip gloss, this adorable lip crayon is packed with Vitamin E to soften and moisturize lips. Each gloss bar has a different fruity scent and shade, giving lips a natural, sheer color with a high shine glossy finish. This seriously adorable gloss bar can be worn alone or over a tint to add a little extra shine!",
+        "tamaño": "2 g"
     }]
 }
