@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{titulo}}</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
-<body style="background-image: url(./images/fondoMalla.png);">
-<nav>
-            <img src="./images/logo.png" alt="" style="width:200px">
 
-    <ol>
-        <li> <div class="button" style="background-image:url(./images/makeup.png)">
-                    <h3><em><u>MAKEUP</u></em></h3></li>
-        <li> <div class="button" style="background-image:url(./images/skincare.png)">
-                    <h3>SKINCARE</h3></li>
-        <li> <div class="button" style="background-image:url(./images/body.png)">
-                    <h3>BODY</h3></li>
-    </ul>
-</nav>
-<div class="banner" style="background-image:url(./images/bannerImage.png)">
-    <h1>♡ TONY MAKEUP ♡</h1>
-</div>
-<div class="contenidoProductos">
-    <div class="filtros">
-        <h1>FILTER BY</h1>
-        <div class="filtroZona">
-           <h2>ZONE</h2>
-             <ol>
-            <li>EYES</li>
-            <li>LIPS</li>
-            <li>FACE</li>
-        </ol>
+<body id="home" style="background-image: url(/images/fondoMalla.png);">
+    <nav>
+        <img src="/images/logo.png" alt="" style="width:200px">
+
+        <ol>
+            <li>
+                <div class="button" style="background-image:url(/images/makeup.png)">
+                    <h3>
+                        <em>
+                            <u>MAKEUP</u>
+                        </em>
+                    </h3>
+            </li>
+            <li>
+                <div class="button" style="background-image:url(/images/skincare.png)">
+                    <h3>SKINCARE</h3>
+            </li>
+            <li>
+                <div class="button" style="background-image:url(./images/body.png)">
+                    <h3>BODY</h3>
+            </li>
+            </ul>
+    </nav>
+    <div class="banner" style="background-image:url(./images/bannerImage.png)">
+        <h1>♡ TONY MAKEUP ♡</h1>
     </div>
-        <div class="filtroColor">
-        <h2>COLOR</h2>
+    <div class="contenidoProductos">
+        <div class="filtros">
+            <h1>FILTER BY</h1>
+            <div class="filtroZona">
+                <h2>ZONE</h2>
+                <ol>
+                    <li>EYES</li>
+                    <li>LIPS</li>
+                    <li>FACE</li>
+                </ol>
+            </div>
+            <div class="filtroColor">
+                <h2>COLOR</h2>
+            </div>
+            <div class="filtroPrecio">
+                <h2>PRICE</h2>
+            </div>
+        </div>
+        <div class="productos">
+            {{#each maquillaje}}
+            <a href="/producto/{{id}}">
+                <div class="productoM">
+                    <img src="{{imagen}}" alt="">
+                    <h1>{{nombre}}</h1>
+                    <h2>{{precio}}</h2>
+                </div>
+            </a>
+            {{/each}}
+        </div>
     </div>
-        <div class="filtroPrecio">
-        <h2>PRICE</h2>
-    </div>
-</div>
-<div class="productos">
-    {{#each maquillaje}} 
-    <a href="/producto/{{id}}">
-    <div class="productoM">
-        <img src="{{imagen}}" alt="">
-        <h1>{{nombre}}</h1>
-        <h2>{{precio}}</h2>
-       </div>
-       </a>
-    {{/each}}
-</div>
-</div>
-<div class="footer">
-    <div class="content">
+    <div class="footer">
+        <div class="content">
             <div class="about">
                 <ol>
                     <h3>ABOUT US</h3>
@@ -78,9 +90,10 @@
             <div class="etc">
                 <img src="./images/logo.png" alt="">
             </div>
-          
+
         </div>
-        
-</div>
+
+    </div>
 </body>
+
 </html>
