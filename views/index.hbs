@@ -25,10 +25,10 @@
 </div>
 <div class="contenidoProductos">
     <div class="filtros">
-    <h1>FILTER BY</h1>
-    <div class="filtroZona">
-        <h2>ZONE</h2>
-        <ol>
+        <h1>FILTER BY</h1>
+        <div class="filtroZona">
+           <h2>ZONE</h2>
+             <ol>
             <li>EYES</li>
             <li>LIPS</li>
             <li>FACE</li>
@@ -43,14 +43,44 @@
 </div>
 <div class="productos">
     {{#each maquillaje}} 
+    <a href="/producto/{{id}}">
     <div class="productoM">
         <img src="{{imagen}}" alt="">
         <h1>{{nombre}}</h1>
         <h2>{{precio}}</h2>
        </div>
+       </a>
     {{/each}}
 </div>
 </div>
+<div class="footer">
+    <div class="content">
+            <div class="about">
+                <ol>
+                    <h3>ABOUT US</h3>
+                    <a href="#">Stocklists</a>
+                    <a href="#">Our Story</a>
+                    <a href="#">Wholesale</a>
+                    <a href="#">Press</a>
+                </ol>
+            </div>
+            <div class="suport">
 
+                <ol>
+                    <h3>SUPPORT</h3>
+                    <a href="#">Customer Support</a>
+                    <a href="#">Shipping and Returns</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">F.A.Q.</a>
+                </ol>
+            </div>
+            <div class="etc">
+                <img src="./images/logo.png" alt="">
+            </div>
+          
+        </div>
+        
+</div>
 </body>
 </html>

@@ -22,6 +22,14 @@ MongoClient.connect('mongodb://localhost:27017',function(err,client){
         console.log('Listening port 1889');
     });});
 
+    
+app.get("/producto/:id", function (req, res) {
+   var producto =  db.collection('maquillaje').find({id: ""+req.params.id+""});
+   producto.toArray((err,result) =>{
+        res.render('producto', { titulo: 'Tonymoly' , prod: result[0]}); 
+   });
+});
+
 
 app.get("/", function (req, res) {
     var maquillaje=db.collection('maquillaje').find();
