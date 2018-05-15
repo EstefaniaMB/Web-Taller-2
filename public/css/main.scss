@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+@-webkit-keyframes hvr-pulse {
+    25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
+@keyframes hvr-pulse {
+    25% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    75% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+}
+
 #home {
     font-family: Cabin;
     width: 100%;
@@ -46,8 +68,7 @@
                 }
             }
         }
-    } 
-    
+    }
     .banner {
         background-repeat: no-repeat;
         background-size: 100% auto;
@@ -71,34 +92,64 @@
         .filtros {
             background-color: white;
             position: absolute;
-            ;
             height: 100%;
             width: 20%;
             float: left;
             h1 {
-
                 font-family: Raleway;
                 font-weight: 900;
                 font-size: 25px;
                 margin: 35px;
             }
-            h2 {
-                font-family: Raleway;
-                font-weight: 900;
-                font-size: 20px;
-                margin: 15px 35px;
-                color: #cb7bff;
+            .filtroZona,
+            .filtroPrecio {
+                h2 {
+                    font-family: Raleway;
+                    font-weight: 900;
+                    font-size: 20px;
+                    margin: 15px 35px;
+                    color: #cb7bff;
+                }
+                ol {
+                    li {
+                        text-align: left;
+                        display: block;
+                        text-decoration: none;
+                        color: black;
+                        margin-bottom: 0.5em;
+                        &:hover {
+                            color: rgb(122, 79, 241);
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
-            ol {
-                               li {
-                    text-align: left;
-                    display: block;
-                    text-decoration: none;
-                    color: black;
-                    margin-bottom: 0.5em;
-                    &:hover {
-                        color: rgb(122, 79, 241);
-                        text-decoration: underline;
+            .filtroColor {
+                margin: 2em;
+                h2 {
+                    font-family: Raleway;
+                    font-weight: 900;
+                    font-size: 20px;
+                    color: #cb7bff;
+                }
+                button {
+                    background: none;
+                    color: inherit;
+                    border: none;
+                    padding: 0;
+                    font: inherit;
+                    cursor: pointer;
+                    outline: inherit;
+                    :hover,:active {
+                        -webkit-animation-name: hvr-pulse;
+                        animation-name: hvr-pulse;
+                        -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
                     }
                 }
             }
@@ -113,29 +164,29 @@
             height: max-content;
             vertical-align: middle;
             float: right;
-            >a{
+            >a {
                 text-decoration: none;
                 color: black;
-            .productoM {
-                width: min-content;
-                text-align: center;
-                margin-top: 3em;
-                float: left;
-                img {
-                    border-radius: 50%;
-                    width: 250px;
+                .productoM {
+                    width: min-content;
+                    text-align: center;
+                    margin-top: 3em;
+                    float: left;
+                    img {
+                        border-radius: 50%;
+                        width: 250px;
+                    }
+                    h1 {
+                        font-family: Raleway;
+                        font-weight: 900;
+                        font-size: 18px;
+                    }
+                    h2 {
+                        font-family: Raleway;
+                        font-weight: 500;
+                        font-size: 15px;
+                    }
                 }
-                h1 {
-                    font-family: Raleway;
-                    font-weight: 900;
-                    font-size: 18px;
-                }
-                h2 {
-                    font-family: Raleway;
-                    font-weight: 500;
-                    font-size: 15px;
-                }
-            }
             }
         }
     }
@@ -196,7 +247,8 @@
         }
     }
 }
-#producto{
+
+#producto {
     font-family: Cabin;
     width: 100%;
     height: 100%;
@@ -242,5 +294,90 @@
                 }
             }
         }
-    } 
+    }
+    .contenido {
+        position: relative;
+        background-color: white;
+        display: block;
+        overflow: auto;
+        height: fit-content;
+        .imagenProducto {
+            //  background: #cb7bff;
+            width: 40%;
+            height: 100%;
+            float: left;
+            vertical-align: middle;
+            img {
+                float: right;
+                ;
+            }
+        }
+        .infoProducto {
+            position: absolute;
+            width: 60%;
+            right: 0;
+            height: 100%; //background: cadetblue;
+            .contenedorInfo {
+                position: absolute;
+                margin: 0 13em 0 0;
+                top: 25%; // background: #f5576c;
+            }
+        }
+    }
+    .footer {
+        background-image: linear-gradient(120deg, #f5576c 0%, #f093fb 100%);
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        padding: 3em 0;
+        .content {
+            margin: 0 2em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: stretch;
+            text-align: center;
+            .about {
+                width: 10%;
+            }
+            .suport {
+                width: 20%;
+            }
+            .etc {
+                width: 70%;
+                img {
+                    position: absolute;
+                    right: 5em;
+                    bottom: 3em;
+                }
+            }
+            ol {
+                h3 {
+                    text-align: left;
+                    display: block;
+                    text-decoration: none;
+                    font-family: Raleway;
+                    font-weight: 900;
+                    font-size: 20px;
+                    color: white;
+                    ;
+                }
+                a {
+                    text-align: left;
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    margin-bottom: 0.5em;
+                    &:hover {
+                        color: rgb(122, 79, 241);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }
