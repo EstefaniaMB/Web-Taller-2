@@ -41,9 +41,9 @@
             <div class="filtroZona">
                 <h2>ZONE</h2>
                 <ol>
-                    <li>EYES</li>
-                    <li>LIPS</li>
-                    <li>FACE</li>
+                    <li onclick="filterSelection('eyes')">EYES</li>
+                    <li onclick="filterSelection('lips')">LIPS</li>
+                    <li onclick="filterSelection('face')">FACE</li>
                 </ol>
             </div>
             <div class="filtroColor">
@@ -69,7 +69,7 @@
                 <div class="productoM">
                     <img src="{{imagen}}" alt="">
                     <h1>{{nombre}}</h1>
-                    <h2>{{precio}}</h2>
+                    <h2>${{precio}}</h2>
                 </div>
             </a>
             {{/each}}
