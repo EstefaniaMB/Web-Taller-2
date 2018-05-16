@@ -11,7 +11,9 @@
 
 <body id="producto" style="background-image: url(/images/fondoMalla.png);">
     <nav>
-        <a href="/"><img src="/images/logo.png" alt="" style="width:200px" ></a>
+        <a href="/">
+            <img src="/images/logo.png" alt="" style="width:200px">
+        </a>
 
         <ol>
             <li>
@@ -32,7 +34,7 @@
             </li>
         </ol>
         <button>
-            <a href="checkout">
+            <a href="/checkout">
                 <div class="carritoview">
                     <img src="/images/cart.png" alt=""> </div>
                 <div class="carrito">
@@ -51,7 +53,7 @@
                 <h2>${{prod.precio}}</h2>
                 <p>{{prod.descripcion}}</p>
                 <p>Size: {{prod.tamaño}}</p>
-                    <button class="agregar">Add to cart</button>
+                <button class="agregar">Add to cart</button>
             </div>
         </div>
     </div>
@@ -84,7 +86,8 @@
         </div>
 
     </div>
-
+    <script src='/js/client.js'></script>
+    <script src='/js/productos.js'></script>
 </body>
 
 </html>
