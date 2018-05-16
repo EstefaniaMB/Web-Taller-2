@@ -68,6 +68,27 @@
                 }
             }
         }
+        button {
+            position: absolute;
+            right: 2em;
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            :hover {
+                -webkit-animation-name: hvr-pulse;
+                animation-name: hvr-pulse;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+            }
+        }
     }
     .banner {
         background-repeat: no-repeat;
@@ -86,13 +107,14 @@
         }
     }
     .contenidoProductos {
-        position: relative;
+        // position: relative;
         display: block;
         overflow: auto;
+        height: fit-content;
         .filtros {
             background-color: white;
             position: absolute;
-            height: 100%;
+            height: auto;
             width: 20%;
             float: left;
             h1 {
@@ -101,7 +123,8 @@
                 font-size: 25px;
                 margin: 35px;
             }
-            .filtroZona, .filtroPrecio {
+            .filtroZona,
+            .filtroPrecio {
                 h2 {
                     font-family: Raleway;
                     font-weight: 900;
@@ -116,10 +139,17 @@
                         text-decoration: none;
                         color: black;
                         margin-bottom: 0.5em;
-                        &:hover {
-                            color: rgb(122, 79, 241);
-                            text-decoration: underline;
-                            cursor: pointer;
+                        a {
+                            text-align: left;
+                            display: block;
+                            text-decoration: none;
+                            color: black;
+                            margin-bottom: 0.5em;
+                            &:hover {
+                                color: rgb(122, 79, 241);
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -140,7 +170,7 @@
                     font: inherit;
                     cursor: pointer;
                     outline: inherit;
-                    :hover{
+                    :hover {
                         -webkit-animation-name: hvr-pulse;
                         animation-name: hvr-pulse;
                         -webkit-animation-duration: 1s;
@@ -150,7 +180,7 @@
                         -webkit-animation-iteration-count: infinite;
                         animation-iteration-count: infinite;
                     }
-                    :active{
+                    :active {
                         -webkit-transform: scale(1.1);
                         transform: scale(1.1);
                     }
@@ -167,14 +197,14 @@
             height: max-content;
             vertical-align: middle;
             float: right;
-            >a {
-                text-decoration: none;
-                color: black;
-                .productoM {
+            .productoM {
+                margin: 3em;
+                >a {
+                    text-decoration: none;
+                    color: black;
                     width: min-content;
                     text-align: center;
                     margin-top: 3em;
-                    float: left;
                     img {
                         border-radius: 50%;
                         width: 250px;
@@ -182,12 +212,36 @@
                     h1 {
                         font-family: Raleway;
                         font-weight: 900;
-                        font-size: 18px;
+                        font-size: 15px;
                     }
                     h2 {
                         font-family: Raleway;
                         font-weight: 500;
                         font-size: 15px;
+                    }
+                }
+            }
+            .btnA {
+                text-align: center;
+                margin: auto;
+                button {
+                    background-color: #f5576c;
+                    padding: 0.5em 1em;
+                    font-size: 18px;
+                    font-weight: 900;
+                    font-family: Cabin;
+                    color: white;
+                    border: none;
+                    &:hover {
+                        cursor: pointer;
+                        -webkit-animation-name: hvr-pulse;
+                        animation-name: hvr-pulse;
+                        -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
                     }
                 }
             }
@@ -297,6 +351,27 @@
                 }
             }
         }
+        button {
+            position: absolute;
+            right: 2em;
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            &:hover {
+                -webkit-animation-name: hvr-pulse;
+                animation-name: hvr-pulse;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+            }
+        }
     }
     .contenido {
         position: relative;
@@ -380,6 +455,76 @@
                         text-decoration: underline;
                     }
                 }
+            }
+        }
+    }
+}
+
+#checkout {
+    font-family: Cabin;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    nav {
+        margin: 0 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: center;
+        ol {
+            li {
+                display: inline;
+                margin-right: 10px;
+                .button {
+                    text-align: center;
+                    border: none;
+                    background: none;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    background-position: center center;
+                    cursor: pointer;
+                    display: table-cell;
+                    vertical-align: middle;
+                    h3 {
+                        font-size: 15px;
+                        bottom: 0;
+                        color: rgb(255, 255, 255);
+                    }
+                    &:hover {
+                        transform: scale(1.3);
+                        -moz-transform: scale(1.3);
+                        -webkit-transform: scale(1.3);
+                        -o-transform: scale(1.3);
+                        -ms-transform: scale(1.3);
+                        transition: all .2s;
+                    }
+                    width: 120px;
+                    height: 70px;
+                }
+            }
+        }
+        button {
+            position: absolute;
+            right: 2em;
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            &:hover {
+                -webkit-animation-name: hvr-pulse;
+                animation-name: hvr-pulse;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
             }
         }
     }

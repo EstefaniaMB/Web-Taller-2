@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{titulo}}</title>
     <link rel="stylesheet" href="/css/main.css">
+    <script src="index.js"></script>
 </head>
 
 <body id="home" style="background-image: url(/images/fondoMalla.png);">
@@ -30,7 +31,12 @@
                 <div class="button" style="background-image:url(./images/body.png)">
                     <h3>BODY</h3>
             </li>
-            </ul>
+        </ol>
+        <button>
+            <a href="/checkout">
+                <img src="./images/cart.png" alt="">
+            </a>
+        </button>
     </nav>
     <div class="banner" style="background-image:url(./images/bannerImage.png)">
         <h1>♡ TONY MAKEUP ♡</h1>
@@ -41,18 +47,37 @@
             <div class="filtroZona">
                 <h2>ZONE</h2>
                 <ol>
-                    <li onclick="filterSelection('eyes')">EYES</li>
-                    <li onclick="filterSelection('lips')">LIPS</li>
-                    <li onclick="filterSelection('face')">FACE</li>
+                    <li>
+                        <a href="/?zone=eyes">EYES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/?zone=lips">LIPS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/?zone=face">FACE
+                        </a>
+                    </li>
                 </ol>
             </div>
             <div class="filtroColor">
                 <h2>COLOR</h2>
-                <button><img src="/images/black.png" alt=""></button>
-                <button><img src="/images/red.png" alt=""></button>
-                <button><img src="/images/pink.png" alt=""></button>
-                <button><img src="/images/orange.png" alt=""></button>
-                <button><img src="/images/beige.png" alt=""></button>
+                <button>
+                    <img src="/images/black.png" alt="">
+                </button>
+                <button>
+                    <img src="/images/red.png" alt="">
+                </button>
+                <button>
+                    <img src="/images/pink.png" alt="">
+                </button>
+                <button>
+                    <img src="/images/orange.png" alt="">
+                </button>
+                <button>
+                    <img src="/images/beige.png" alt="">
+                </button>
             </div>
             <div class="filtroPrecio">
                 <h2>PRICE ($)</h2>
@@ -65,13 +90,17 @@
         </div>
         <div class="productos">
             {{#each maquillaje}}
-            <a href="/producto/{{id}}">
-                <div class="productoM">
+            <div class="productoM">
+                <a href="/producto/{{id}}">
+
                     <img src="{{imagen}}" alt="">
                     <h1>{{nombre}}</h1>
                     <h2>${{precio}}</h2>
-                </div>
-            </a>
+                </a>
+<div class="btnA">                <button class="agregar">Add to cart</button>
+</div>
+
+            </div>
             {{/each}}
         </div>
     </div>
