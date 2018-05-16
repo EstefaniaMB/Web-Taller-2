@@ -12,7 +12,9 @@
 
 <body id="home" style="background-image: url(/images/fondoMalla.png);">
     <nav>
-        <img src="/images/logo.png" alt="" style="width:200px">
+        <a href="/">
+            <img src="/images/logo.png" alt="" style="width:200px">
+        </a>
 
         <ol>
             <li>
@@ -34,7 +36,11 @@
         </ol>
         <button>
             <a href="/checkout">
-                <img src="./images/cart.png" alt="">
+                <div class="carritoview">
+                    <img src="./images/cart.png" alt=""> </div>
+                <div class="carrito">
+                    0
+                </div>
             </a>
         </button>
     </nav>
@@ -44,7 +50,11 @@
     <div class="contenidoProductos">
         <div class="filtros">
             <h1>FILTER BY</h1>
+            <p>
+                <a href="/">Show All</a>
+            </p>
             <div class="filtroZona">
+
                 <h2>ZONE</h2>
                 <ol>
                     <li>
@@ -64,29 +74,47 @@
             <div class="filtroColor">
                 <h2>COLOR</h2>
                 <button>
-                    <img src="/images/black.png" alt="">
+                    <a href="/?color=black">
+                        <img src="/images/black.png" alt="">
+                    </a>
                 </button>
                 <button>
-                    <img src="/images/red.png" alt="">
+                    <a href="/?color=red">
+                        <img src="/images/red.png" alt="">
+                    </a>
                 </button>
                 <button>
-                    <img src="/images/pink.png" alt="">
+                    <a href="/?color=pink">
+                        <img src="/images/pink.png" alt="">
+                    </a>
                 </button>
                 <button>
-                    <img src="/images/orange.png" alt="">
+                    <a href="/?color=orange">
+                        <img src="/images/orange.png" alt="">
+                    </a>
                 </button>
                 <button>
-                    <img src="/images/beige.png" alt="">
+                    <a href="/?color=beige">
+                        <img src="/images/beige.png" alt="">
+                    </a>
                 </button>
+
             </div>
             <div class="filtroPrecio">
                 <h2>PRICE ($)</h2>
                 <ol>
-                    <li>8.00 - 14.00</li>
-                    <li>14.01 - 18.00</li>
-                    <li>18.01 - 20.00</li>
+                    <li>
+                        <a href="/?price=8-12">8.00 - 12.00</a>
+                    </li>
+                    <li>
+                        <a href="/?price=12-16">12.01 - 16.00</a>
+                    </li>
+                    <li>
+                        <a href="/?price=16-20">16.01 - 20.00</a>
+                    </li>
                 </ol>
             </div>
+            <div class="backW"></div>
         </div>
         <div class="productos">
             {{#each maquillaje}}
@@ -97,14 +125,15 @@
                     <h1>{{nombre}}</h1>
                     <h2>${{precio}}</h2>
                 </a>
-<div class="btnA">                <button class="agregar">Add to cart</button>
-</div>
+                <div class="btnA">
+                    <button class="agregar">Add to cart</button>
+                </div>
 
             </div>
             {{/each}}
         </div>
     </div>
-    <div class="footer">
+     <div class="footer">
         <div class="content">
             <div class="about">
                 <ol>
@@ -130,9 +159,12 @@
                 <img src="./images/logo.png" alt="">
             </div>
 
-        </div>
+        </div> 
 
     </div>
+
+    <script src='js/client.js'></script>
+    <script src='js/productos.js'></script>
 </body>
 
 </html>

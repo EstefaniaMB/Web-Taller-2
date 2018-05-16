@@ -69,24 +69,41 @@
             }
         }
         button {
-            position: absolute;
-            right: 2em;
-            background: none;
-            color: inherit;
-            border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            outline: inherit;
-            :hover {
-                -webkit-animation-name: hvr-pulse;
-                animation-name: hvr-pulse;
-                -webkit-animation-duration: 1s;
-                animation-duration: 1s;
-                -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
+            font-family: Cabin;
+            a {
+                text-decoration: none;
+                position: absolute;
+                right: 2em;
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+                :hover {
+                    -webkit-animation-name: hvr-pulse;
+                    animation-name: hvr-pulse;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-timing-function: linear;
+                    animation-timing-function: linear;
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                }
+                .carritoview img {
+                    width: auto;
+                    height: 25px;
+                }
+                .carrito {
+                    padding: 2px 5px 2px 5px;
+                    width: 13px;
+                    color: white;
+                    margin: -50px 0 0 18px;
+                    z-index: 10002;
+                    border-radius: 50%;
+                    background-color: #ff4746;
+                }
             }
         }
     }
@@ -107,14 +124,14 @@
         }
     }
     .contenidoProductos {
-        // position: relative;
+        position: relative;
         display: block;
         overflow: auto;
-        height: fit-content;
+        //height: fit-content;
         .filtros {
             background-color: white;
             position: absolute;
-            height: auto;
+            height: fit-content;
             width: 20%;
             float: left;
             h1 {
@@ -122,6 +139,21 @@
                 font-weight: 900;
                 font-size: 25px;
                 margin: 35px;
+            }
+            p {
+                a {
+                    margin: 35px;
+                    text-align: left;
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    margin-bottom: 0.5em;
+                    &:hover {
+                        color: rgb(122, 79, 241);
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
             }
             .filtroZona,
             .filtroPrecio {

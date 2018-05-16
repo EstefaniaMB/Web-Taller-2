@@ -55,6 +55,16 @@ app.get("/", function (req, res) {
         maquillaje.filter({
             zone: req.query.zone
         });
+        
+    if (req.query.color)
+    maquillaje.filter({
+        color: req.query.color
+    });
+
+    if (req.query.price)
+    maquillaje.filter({
+        price: req.query.price
+    });
 
     maquillaje.toArray((err, result) => {
         res.render('index', {
