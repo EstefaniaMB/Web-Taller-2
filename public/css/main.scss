@@ -613,23 +613,56 @@
             ul {
                 list-style-type: none;
                 width: 80%;
-              
-              .cartItem {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                align-content: flex-start;
-                align-items: flex-start;
-                width: 100%;
-                .img_item{
-                    border-radius: 50%;
-                    width: 30%;
-                    img{
-                        
+                .cartItem {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    .img_item {
+                        width: 30%;float: left;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
                     }
+                    .txt_item {
+                        float: left;
+                        h4 {
+                            font-family: Raleway;
+                            font-weight: 900;
+                            font-size: 20px;
+                            color: #cb7bff;
+                        }
+                    }
+                  .priceItem{
+                      float: left;
+                  }
                 }
-              }}
+            }
+            button {
+                background-color: #f5576c;
+                padding: 0.5em 1em;
+                font-size: 18px;
+                font-weight: 900;
+                font-family: Cabin;
+                color: white;
+                border: none;
+                &:hover {
+                    cursor: pointer;
+                    -webkit-animation-name: hvr-pulse;
+                    animation-name: hvr-pulse;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-timing-function: linear;
+                    animation-timing-function: linear;
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                }
+            }
         }
     }
 }
