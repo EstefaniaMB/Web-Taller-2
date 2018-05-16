@@ -1,5 +1,5 @@
 const express = require('express'),
-    consolidate = require('consolidate'),
+    engines = require('consolidate'),
     hbs = require('handlebars'),
     MongoClient = require('mongodb').MongoClient,
     ObjectID = require('mongodb').ObjectId;
@@ -7,10 +7,10 @@ const express = require('express'),
 var app = express(),
     db;
 
-app.engine('hbs', consolidate.handlebars);
+app.engine('hbs', engines.handlebars);
 
-app.set('view engine', 'hbs');
 app.set('views', './views');
+app.set('view engine', 'hbs');
 
 app.use(express.static('public'))
 
@@ -26,7 +26,7 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
 });
 
 
- app.get("/producto/:id", function (req, res) {
+  app.get("/producto/:id", function (req, res) {
     var producto = db.collection('maquillaje').find({
         id: "" + req.params.id + ""
     });
@@ -36,16 +36,7 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
             prod: result[0]
         });
     });
-}); 
-
-/* app.get('/producto/:id', (req, res) => {
-    db.collection('productos').find({
-        id: req.params.id
-    }).toArray((err, result) => res.render('producto', {
-        titulo: 'Tonymoly',
-        prod: result[0]
-    }))
-}); */
+});  
 
 app.get("/", function (req, res) {
 
@@ -78,13 +69,27 @@ app.get('/checkout', (req, res) => {
     res.render('checkout');
 });
 
-app.get('/productosPorIDs', (req, res) => {
-    console.log(req.query.ids);
+/* app.get('/producto/:id', (req, res) => {
+    db.collection('maquillaje').find({
+            id:  ""+req.params.id+""
+        })
+        .toArray((err, result) => {
+            res.render('producto', {
+                  prod: result                
+                });
+           });
+});
+
+
+app.get('/productosPorIds', (req, res) => {
+    console.log('asdas' + req.query.ids);
+
     var arreglo = req.query.ids.split(',');
     arreglo = arreglo.map(function (id) {
         return new ObjectID(id);
     });
-    var maq = db.collection('maquillaje').find({
+    var product = db.collection('maquillaje')
+        .find({
             _id: {
                 $in: arreglo
             }
@@ -92,4 +97,4 @@ app.get('/productosPorIDs', (req, res) => {
         .toArray((err, result) => {
             res.send(result);
         });
-});
+}); */

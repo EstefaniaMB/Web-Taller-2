@@ -70,6 +70,13 @@
         }
         button {
             font-family: Cabin;
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
             a {
                 text-decoration: none;
                 position: absolute;
@@ -126,8 +133,7 @@
     .contenidoProductos {
         position: relative;
         display: block;
-        overflow: auto;
-        //height: fit-content;
+        overflow: auto; //height: fit-content;
         .filtros {
             background-color: white;
             position: absolute;
@@ -384,8 +390,7 @@
             }
         }
         button {
-            position: absolute;
-            right: 2em;
+            font-family: Cabin;
             background: none;
             color: inherit;
             border: none;
@@ -393,15 +398,40 @@
             font: inherit;
             cursor: pointer;
             outline: inherit;
-            &:hover {
-                -webkit-animation-name: hvr-pulse;
-                animation-name: hvr-pulse;
-                -webkit-animation-duration: 1s;
-                animation-duration: 1s;
-                -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
+            a {
+                text-decoration: none;
+                position: absolute;
+                right: 2em;
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+                :hover {
+                    -webkit-animation-name: hvr-pulse;
+                    animation-name: hvr-pulse;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-timing-function: linear;
+                    animation-timing-function: linear;
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                }
+                .carritoview img {
+                    width: auto;
+                    height: 25px;
+                }
+                .carrito {
+                    padding: 2px 5px 2px 5px;
+                    width: 13px;
+                    color: white;
+                    margin: -50px 0 0 18px;
+                    z-index: 10002;
+                    border-radius: 50%;
+                    background-color: #ff4746;
+                }
             }
         }
     }
@@ -419,6 +449,8 @@
             vertical-align: middle;
             img {
                 float: right;
+                max-width: 100%;
+                max-height: 100%;
                 ;
             }
         }
@@ -431,6 +463,26 @@
                 position: absolute;
                 margin: 0 13em 0 0;
                 top: 25%; // background: #f5576c;
+                button {
+                    background-color: #f5576c;
+                    padding: 0.5em 1em;
+                    font-size: 18px;
+                    font-weight: 900;
+                    font-family: Cabin;
+                    color: white;
+                    border: none;
+                    &:hover {
+                        cursor: pointer;
+                        -webkit-animation-name: hvr-pulse;
+                        animation-name: hvr-pulse;
+                        -webkit-animation-duration: 1s;
+                        animation-duration: 1s;
+                        -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                    }
+                }
             }
         }
     }
@@ -539,8 +591,7 @@
             }
         }
         button {
-            position: absolute;
-            right: 2em;
+            font-family: Cabin;
             background: none;
             color: inherit;
             border: none;
@@ -548,16 +599,50 @@
             font: inherit;
             cursor: pointer;
             outline: inherit;
-            &:hover {
-                -webkit-animation-name: hvr-pulse;
-                animation-name: hvr-pulse;
-                -webkit-animation-duration: 1s;
-                animation-duration: 1s;
-                -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
+            a {
+                text-decoration: none;
+                position: absolute;
+                right: 2em;
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+                :hover {
+                    -webkit-animation-name: hvr-pulse;
+                    animation-name: hvr-pulse;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-timing-function: linear;
+                    animation-timing-function: linear;
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+                }
+                .carritoview img {
+                    width: auto;
+                    height: 25px;
+                }
+                .carrito {
+                    padding: 2px 5px 2px 5px;
+                    width: 13px;
+                    color: white;
+                    margin: -50px 0 0 18px;
+                    z-index: 10002;
+                    border-radius: 50%;
+                    background-color: #ff4746;
+                }
             }
         }
     }
+    h1 {
+        font-family: Raleway;
+        font-weight: 900;
+        font-size: 80px;
+        color: black;
+        margin: 0 0.5em 0.5em 0.5em;
+      
+    }
+    
 }

@@ -32,8 +32,12 @@
             </li>
         </ol>
         <button>
-            <a href="/checkout">
-                <img src="/images/cart.png" alt="">
+            <a href="checkout">
+                <div class="carritoview">
+                    <img src="/images/cart.png" alt=""> </div>
+                <div class="carrito">
+                    0
+                </div>
             </a>
         </button>
     </nav>
@@ -47,6 +51,7 @@
                 <h2>${{prod.precio}}</h2>
                 <p>{{prod.descripcion}}</p>
                 <p>Size: {{prod.tamaño}}</p>
+                    <button class="agregar">Add to cart</button>
             </div>
         </div>
     </div>

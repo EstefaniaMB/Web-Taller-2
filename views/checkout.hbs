@@ -12,7 +12,9 @@
 
 <body id="checkout" style="background-image: url(/images/fondoMalla.png);">
     <nav>
-        <img src="/images/logo.png" alt="" style="width:200px" href="/">
+        <a href="/">
+            <img src="/images/logo.png" alt="" style="width:200px">
+        </a>
 
         <ol>
             <li>
@@ -33,13 +35,40 @@
             </li>
         </ol>
         <button>
-            <img src="./images/cart.png" alt="">
+            <a href="checkout">
+                <div class="carritoview">
+                    <img src="/images/cart.png" alt=""> </div>
+                <div class="carrito">
+                    0
+                </div>
+            </a>
         </button>
     </nav>
 
     <h1>Shopping Cart</h1>
 
     <ul class="lista"></ul>
+
+    <div class="rect"></div>
+    <ul class="lista"></ul>
+
+    <hr/>
+    <div class="sub_div">
+        <p>Subtotal</p>
+        <p class="subtotal"></p>
+
+    </div>
+    <div class="ship_div">
+        <p>Shipping</p>
+        <p>$ 5.00</p>
+
+    </div>
+
+    <hr/>
+    <div class="total_div">
+        <h3>TOTAL</h3>
+        <h3 class="total"></h3>
+    </div>
 
     <script src="js/cliente.js"></script>
     <script src="js/checkout.js"></script>
