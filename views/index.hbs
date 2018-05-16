@@ -119,14 +119,14 @@
         </div>
         <div class="productos">
             {{#each maquillaje}}
-            <div class="productoM">
+            <div class="productoM" >
                 <a href="/producto/{{id}}">
 
                     <img src="{{imagen}}" alt="">
                     <h1>{{nombre}}</h1>
                     <h2>${{precio}}</h2>
                 </a>
-                <div class="btnA">
+                <div class="btnA" data-id="{{this._id}}">
                     <button class="agregar">Add to cart</button>
                 </div>
 

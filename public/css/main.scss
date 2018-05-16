@@ -622,6 +622,13 @@
                 align-content: flex-start;
                 align-items: flex-start;
                 width: 100%;
+                .img_item{
+                    border-radius: 50%;
+                    width: 30%;
+                    img{
+                        
+                    }
+                }
               }}
         }
     }

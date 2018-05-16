@@ -26,7 +26,7 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
 });
 
 
-  app.get("/producto/:id", function (req, res) {
+app.get("/producto/:id", function (req, res) {
     var producto = db.collection('maquillaje').find({
         id: "" + req.params.id + ""
     });
@@ -36,7 +36,7 @@ MongoClient.connect('mongodb://localhost:27017', function (err, client) {
             prod: result[0]
         });
     });
-});  
+});
 
 app.get("/", function (req, res) {
 
@@ -46,16 +46,16 @@ app.get("/", function (req, res) {
         maquillaje.filter({
             zone: req.query.zone
         });
-        
+
     if (req.query.color)
-    maquillaje.filter({
-        color: req.query.color
-    });
+        maquillaje.filter({
+            color: req.query.color
+        });
 
     if (req.query.price)
-    maquillaje.filter({
-        price: req.query.price
-    });
+        maquillaje.filter({
+            price: req.query.price
+        });
 
     maquillaje.toArray((err, result) => {
         res.render('index', {
@@ -79,7 +79,7 @@ app.get('/checkout', (req, res) => {
                 });
            });
 });
-
+*/
 
 app.get('/productosPorIds', (req, res) => {
     console.log('asdas' + req.query.ids);
@@ -97,4 +97,4 @@ app.get('/productosPorIds', (req, res) => {
         .toArray((err, result) => {
             res.send(result);
         });
-}); */
+});
